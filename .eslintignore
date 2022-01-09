@@ -1,0 +1,7 @@
+.eslintrc.js
+.prettierrc.js
+svelte.config.js
+vite.config.js
+/public
+/src/vite-env.d.ts
+/dist
