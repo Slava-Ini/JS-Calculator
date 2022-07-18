@@ -1,13 +1,11 @@
 <script>
-  import logo from './assets/svelte.png';
-  import Counter from './lib/Counter.svelte';
+  import Logo from './lib/Logo.svelte';
+  import Calculator from './lib/Calculator.svelte';
 </script>
 
 <main>
-  <img src={logo} alt="Svelte Logo" />
-  <h1>Hello world!</h1>
-
-  <Counter />
+  <Logo />
+  <Calculator />
 </main>
 
 <style>
@@ -16,31 +14,27 @@
       Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 
+  :global(*) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :global(html, body, #app) {
+    height: 100vh;
+  }
+
   main {
-    text-align: center;
-    padding: 1em;
-    margin: 0 auto;
-  }
-
-  img {
-    height: 16rem;
-
-    width: 16rem;
-  }
-
-  h1 {
-    color: #ff3e00;
-    text-transform: uppercase;
-    font-size: 4rem;
-    font-weight: 100;
-    line-height: 1.1;
-    margin: 2rem auto;
-    max-width: 14rem;
-  }
-
-  @media (min-width: 480px) {
-    h1 {
-      max-width: none;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: linear-gradient(
+      82.84deg,
+      #4dcc8c 0%,
+      #4bd08d 12.93%,
+      #75eda6 100%
+    );
   }
 </style>

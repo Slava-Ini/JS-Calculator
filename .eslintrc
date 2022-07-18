@@ -1,5 +1,10 @@
 {
-  "extends": ["eslint:recommended", "airbnb-base", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/recommended",
+    "airbnb-base",
+    "prettier"
+  ],
   "plugins": ["svelte3", "prettier"],
   "env": {
     "es6": true,
@@ -15,9 +20,19 @@
   "parserOptions": {
     "project": "./jsconfig.json"
   },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["."]
+      }
+    }
+  },
   "rules": {
     "prefer-arrow-callback": "off",
     "arrow-body-style": "off",
+    "import/no-absolute-path": "off",
+    "import/no-mutable-exports": "off",
+    // "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
     "import/no-anonymous-default-export": [
       "error",

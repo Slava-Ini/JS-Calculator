@@ -1,0 +1,20 @@
+$colors: (
+  'light-red': #fd3131,
+  'dark-red': #a60505,
+  'dark-blue': #3c5a75,
+  'blue': #3f93ff,
+  'cyan': #32caca,
+  'pink': #fe5390,
+  'purple': #b58bd7,
+  // TODO: choose a better color + for other buttons
+  // 'yellow': #ffc632,
+  'yellow': #FFB156,
+  'white': #ffffff,
+  'grey': #c1c1c1,
+  'transparent-cyan': rgba(255, 255, 255, 0.26),
+  'transparent-grey': rgba(0, 0, 0, 0.31),
+);
+
+@function color($color) {
+  @return map-get($colors, quote($color));
+}
